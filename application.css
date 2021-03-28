@@ -1,0 +1,41 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.combo-box .list-cell 
+{
+    -fx-text-fill: #FFF;
+}
+.combo-box .list-view .list-cell
+{
+	-fx-background-color:  #484A4C;
+}
+.combo-box-popup .list-view .list-cell:filled:hover 
+{
+    -fx-background-color:  #333;
+}
+.combo-box-popup .list-view .list-cell:filled:selected, .combo-box-popup .list-view .list-cell:filled:selected:hover 
+{
+    -fx-background-color: #07577d;
+    -fx-text-fill: #FFF;
+}
+
+
+
+.menu-item .label {
+    -fx-text-fill: #FFF;
+}
+
+.menu-item{
+    -fx-text-fill: #FFF;
+}
+
+.menu-item:focused {
+     -fx-background-color:  #333;
+}
+
+.menu-item:focused .label {
+    -fx-text-fill: #FFF;
+}
+
+.context-menu {
+    -fx-background-color: #484A4C;
+    -fx-text-fill: #FFF;
+}

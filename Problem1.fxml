@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="577.0" prefWidth="870.0" style="-fx-background-color: #121212;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.P1Controller">
+   <children>
+      <TextField fx:id="team1" layoutX="184.0" layoutY="201.0" onKeyTyped="#updateAutoCorrext" style="-fx-background-color: #121212; -fx-text-fill: #FFF; -fx-text-box-border: transparent;">
+         <contextMenu>
+            <ContextMenu fx:id="team1Context">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+              </items>
+            </ContextMenu>
+         </contextMenu></TextField>
+      <TextField fx:id="team2" layoutX="500.0" layoutY="201.0" onKeyTyped="#updateAutoCorrext" style="-fx-background-color: #121212; -fx-text-fill: #FFF;">
+         <contextMenu>
+            <ContextMenu fx:id="team2Context">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+              </items>
+            </ContextMenu>
+         </contextMenu></TextField>
+      <Button id="QueryButton" fx:id="queryButton" layoutX="333.0" layoutY="264.0" mnemonicParsing="false" onAction="#handleQueryButton" prefHeight="34.0" prefWidth="169.0" style="-fx-background-color: #121212;" text="Find Victory Chain" textFill="WHITE">
+         <font>
+            <Font name="Agency FB" size="18.0" />
+         </font></Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff17" height="624.0" layoutX="-23.0" layoutY="-18.0" mouseTransparent="true" stroke="BLACK" strokeType="INSIDE" width="917.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#121212" height="80.0" layoutX="-10.0" mouseTransparent="true" stroke="#121212" strokeType="INSIDE" width="904.0">
+         <effect>
+            <DropShadow color="#000000cc" />
+         </effect>
+      </Rectangle>
+      <Button fx:id="P1Button" layoutX="120.0" mnemonicParsing="false" onAction="#handleTab" prefHeight="74.0" prefWidth="120.0" style="-fx-background-color: #121212; -fx-text-fill: #FFF;" text="Problem 1" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Agency FB" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="P4Button" layoutX="480.0" mnemonicParsing="false" onAction="#handleTab" prefHeight="74.0" prefWidth="120.0" style="-fx-background-color: #121212; -fx-text-fill: #FFF;" text="Problem 4" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Agency FB" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="P3Button" layoutX="360.0" mnemonicParsing="false" onAction="#handleTab" prefHeight="74.0" prefWidth="120.0" style="-fx-background-color: #121212; -fx-text-fill: #FFF;" text="Problem 3" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Agency FB" size="14.0" />
+         </font>
+      </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff2e" height="80.0" layoutX="118.0" stroke="#00000066" strokeType="INSIDE" width="123.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Rectangle>
+      <Button fx:id="P2Button" layoutX="240.0" mnemonicParsing="false" onAction="#handleTab" prefHeight="74.0" prefWidth="120.0" style="-fx-background-color: #121212; -fx-text-fill: #FFF;" text="Problem 2" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Agency FB" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="homeButton" mnemonicParsing="false" onAction="#handleTab" prefHeight="74.0" prefWidth="120.0" style="-fx-background-color: #121212; -fx-text-fill: #FFF;" text="Home" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Agency FB" size="14.0" />
+         </font>
+      </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#363636" height="221.0" layoutX="6.0" layoutY="347.0" stroke="#00000066" strokeType="INSIDE" width="857.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Rectangle>
+      <ImageView fx:id="loadingIcon" fitHeight="100.0" fitWidth="100.0" layoutX="368.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@cube_loading.gif" />
+         </image>
+      </ImageView>
+      <TextFlow fx:id="outBox" layoutX="12.0" layoutY="352.0" prefHeight="211.0" prefWidth="846.0" />
+      <Label layoutX="398.0" layoutY="314.0" text="Output" textFill="WHITE">
+         <font>
+            <Font name="Agency FB" size="18.0" />
+         </font></Label>
+      <Label layoutX="214.0" layoutY="157.0" text="Team 1 (Winner)" textFill="WHITE">
+         <font>
+            <Font name="Agency FB" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="532.0" layoutY="157.0" text="Team 2 (Loser)" textFill="WHITE">
+         <font>
+            <Font name="Agency FB" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="110.0" text="Given 2 teams, create a victory chain. Find a chain that gives you bragging rights of how the first team is better than the second team." textFill="WHITE">
+         <font>
+            <Font name="Agency FB" size="18.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff3b" height="92.0" layoutX="241.0" layoutY="-12.0" mouseTransparent="true" stroke="#121212" strokeType="INSIDE" width="663.0">
+         <effect>
+            <DropShadow color="#000000cc" />
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff17" height="25.0" layoutX="185.0" layoutY="201.0" mouseTransparent="true" stroke="#00000066" strokeType="INSIDE" width="149.0">
+         <effect>
+            <DropShadow color="#000000cc" />
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff17" height="25.0" layoutX="501.0" layoutY="201.0" mouseTransparent="true" stroke="#00000066" strokeType="INSIDE" width="149.0">
+         <effect>
+            <DropShadow color="#000000cc" />
+         </effect>
+      </Rectangle>
+      <Rectangle fx:id="buttonActive" arcHeight="5.0" arcWidth="5.0" fill="#ffffff17" height="44.0" layoutX="333.0" layoutY="259.0" mouseTransparent="true" stroke="#00000066" strokeType="INSIDE" width="169.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff3b" height="92.0" layoutX="-23.0" layoutY="-12.0" mouseTransparent="true" stroke="#121212" strokeType="INSIDE" width="142.0">
+         <effect>
+            <DropShadow color="#000000cc" />
+         </effect>
+      </Rectangle>
+      <Rectangle fx:id="buttonClicked" arcHeight="5.0" arcWidth="5.0" fill="#1212122e" height="44.0" layoutX="333.0" layoutY="259.0" mouseTransparent="true" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="169.0">
+         <effect>
+            <InnerShadow color="#000000cc" height="142.33" radius="70.665" width="142.33" />
+         </effect>
+      </Rectangle>
+   </children>
+</AnchorPane>
